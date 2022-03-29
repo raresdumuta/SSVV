@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="repository.AbstractXMLRepositoryTest" time="0.322" tests="6" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="repository.AbstractXMLRepositoryTest" time="0.328" tests="7" errors="0" skipped="0" failures="0">
   <properties>
     <property name="gopherProxySet" value="false"/>
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="GB"/>
     <property name="sun.boot.library.path" value="/Applications/IntelliJ IDEA.app/Contents/jbr/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/dumutarares/Downloads/Lab1Project2WithMaven/target/surefire/surefirebooter15429996342099487064.jar /Users/dumutarares/Downloads/Lab1Project2WithMaven/target/surefire 2022-03-29T13-52-01_027-jvmRun1 surefire16789665141302069891tmp surefire_09278531414456431536tmp"/>
+    <property name="sun.java.command" value="/Users/dumutarares/Downloads/Lab1Project2WithMaven/target/surefire/surefirebooter7370719141582277781.jar /Users/dumutarares/Downloads/Lab1Project2WithMaven/target/surefire 2022-03-29T14-07-51_386-jvmRun1 surefire15093264150863442353tmp surefire_09166716004873487803tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/dumutarares/Downloads/Lab1Project2WithMaven/target/test-classes:/Users/dumutarares/Downloads/Lab1Project2WithMaven/target/classes:/Users/dumutarares/.m2/repository/org/junit/jupiter/junit-jupiter/5.8.2/junit-jupiter-5.8.2.jar:/Users/dumutarares/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.8.2/junit-jupiter-api-5.8.2.jar:/Users/dumutarares/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/dumutarares/.m2/repository/org/junit/platform/junit-platform-commons/1.8.2/junit-platform-commons-1.8.2.jar:/Users/dumutarares/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/dumutarares/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.8.2/junit-jupiter-params-5.8.2.jar:/Users/dumutarares/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.8.2/junit-jupiter-engine-5.8.2.jar:/Users/dumutarares/.m2/repository/org/junit/platform/junit-platform-engine/1.8.2/junit-platform-engine-1.8.2.jar:"/>
@@ -33,7 +33,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="/Users/dumutarares/Downloads/Lab1Project2WithMaven/target/surefire/surefirebooter15429996342099487064.jar"/>
+    <property name="surefire.real.class.path" value="/Users/dumutarares/Downloads/Lab1Project2WithMaven/target/surefire/surefirebooter7370719141582277781.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="11.0.10+9-b1341.41"/>
@@ -62,10 +62,11 @@
     <property name="java.class.version" value="55.0"/>
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
   </properties>
-  <testcase name="Test_save_student_when_id_is_empty" classname="repository.AbstractXMLRepositoryTest" time="0.117"/>
-  <testcase name="Test_save_student_when_id_is_null_returns_null" classname="repository.AbstractXMLRepositoryTest" time="0.124"/>
-  <testcase name="Test_save_student_when_data_is_valid_success" classname="repository.AbstractXMLRepositoryTest" time="0.009"/>
-  <testcase name="Test_save_student_when_grupa_negative" classname="repository.AbstractXMLRepositoryTest" time="0.004"/>
-  <testcase name="Test_save_student_when_email_is_empty" classname="repository.AbstractXMLRepositoryTest" time="0.003"/>
-  <testcase name="Test_save_student_when_email_is_null" classname="repository.AbstractXMLRepositoryTest" time="0.028"/>
+  <testcase name="testSaveTema" classname="repository.AbstractXMLRepositoryTest" time="0.219"/>
+  <testcase name="Test_save_student_when_id_is_empty" classname="repository.AbstractXMLRepositoryTest" time="0.005"/>
+  <testcase name="Test_save_student_when_id_is_null_returns_null" classname="repository.AbstractXMLRepositoryTest" time="0.006"/>
+  <testcase name="Test_save_student_when_data_is_valid_success" classname="repository.AbstractXMLRepositoryTest" time="0.007"/>
+  <testcase name="Test_save_student_when_grupa_negative" classname="repository.AbstractXMLRepositoryTest" time="0.008"/>
+  <testcase name="Test_save_student_when_email_is_empty" classname="repository.AbstractXMLRepositoryTest" time="0.008"/>
+  <testcase name="Test_save_student_when_email_is_null" classname="repository.AbstractXMLRepositoryTest" time="0.008"/>
 </testsuite>

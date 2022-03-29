@@ -64,6 +64,14 @@ public class AbstractXMLRepositoryTest {
        temaXMLRepo.delete("123");
     }
 
+    @Test
+    public void testSaveTemaInvalid(){
+        Tema tema = new Tema("","",0,18);
+        TemaXMLRepo temaXMLRepo = new TemaXMLRepo("src/main/resources/fisiere/Teme.xml");
+
+        assertEquals(tema,temaXMLRepo.save(tema));
+    }
+
 
 
 }
