@@ -1,6 +1,7 @@
 package repository;
 
 import domain.Student;
+import domain.Tema;
 import org.junit.jupiter.api.Test;
 import org.junit.platform.commons.util.StringUtils;
 
@@ -52,6 +53,15 @@ public class AbstractXMLRepositoryTest {
         StudentXMLRepo studentXMLRepository = new StudentXMLRepo( "src/main/resources/fisiere/Studenti.xml");
 
         assertEquals(student,studentXMLRepository.save(student));
+    }
+
+    @Test
+    public void testSaveTema(){
+        Tema tema = new Tema("123","frumoasa",4,6);
+        TemaXMLRepo temaXMLRepo = new TemaXMLRepo("src/main/resources/fisiere/Teme.xml");
+
+       assertNull(temaXMLRepo.save(tema));
+       temaXMLRepo.delete("123");
     }
 
 
