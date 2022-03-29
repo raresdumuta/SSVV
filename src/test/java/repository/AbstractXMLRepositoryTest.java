@@ -57,11 +57,11 @@ public class AbstractXMLRepositoryTest {
 
     @Test
     public void testSaveTema(){
-        Tema tema = new Tema("123","frumoasa",4,6);
+        Tema tema = new Tema("123889","frumoasa",4,6);
         TemaXMLRepo temaXMLRepo = new TemaXMLRepo("src/main/resources/fisiere/Teme.xml");
 
        assertNull(temaXMLRepo.save(tema));
-       temaXMLRepo.delete("123");
+       temaXMLRepo.delete("123889");
     }
 
     @Test
