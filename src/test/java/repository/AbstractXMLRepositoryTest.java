@@ -2,8 +2,15 @@ package repository;
 
 import domain.Student;
 import domain.Tema;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.io.TempDir;
 import org.junit.platform.commons.util.StringUtils;
+import service.Service;
+import validation.NotaValidator;
+import validation.StudentValidator;
+import validation.TemaValidator;
+import validation.ValidationException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -64,13 +71,40 @@ public class AbstractXMLRepositoryTest {
        temaXMLRepo.delete("123889");
     }
 
+    Service service;
+    @BeforeEach
+    public void init(){
+        StudentValidator studentValidator = new StudentValidator();
+        TemaValidator temaValidator = new TemaValidator();
+        String filenameStudent = "src/main/resources/fisiere/Studenti.xml";
+        String filenameTema = "src/main/resources/fisiere/Teme.xml";
+        String filenameNota = "src/main/resources/fisiere/Note.xml";
+
+        StudentXMLRepo studentXMLRepository = new StudentXMLRepo(filenameStudent);
+        TemaXMLRepo temaXMLRepository = new TemaXMLRepo(filenameTema);
+        NotaValidator notaValidator = new NotaValidator(studentXMLRepository, temaXMLRepository);
+        NotaXMLRepo notaXMLRepository = new NotaXMLRepo(filenameNota);
+        service = new Service(studentXMLRepository, studentValidator, temaXMLRepository, temaValidator, notaXMLRepository, notaValidator);
+    }
+
     @Test
     public void testSaveTemaInvalid(){
         Tema tema = new Tema("","",0,18);
-        TemaXMLRepo temaXMLRepo = new TemaXMLRepo("src/main/resources/fisiere/Teme.xml");
 
-        assertEquals(tema,temaXMLRepo.save(tema));
+        assertEquals(tema,service.addTema(tema));
     }
+    @Test
+    public void testSaveTemaDeadline0(){
+        Tema tema = new Tema("1233455","dw",0,12);
+        assertEquals(tema,service.addTema(tema));
+    }
+
+    @Test
+    public void testSaveTemaPrimire0(){
+        Tema tema = new Tema("12334556","dw",0,12);
+        assertEquals(tema,service.addTema(tema));
+    }
+
 
 
 

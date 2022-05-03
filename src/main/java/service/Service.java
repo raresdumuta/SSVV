@@ -109,7 +109,13 @@ public class Service {
      * @return null daca s-a facut adaugarea sau tema daca aceasta exista deja
      */
     public Tema addTema(Tema tema){
-        temaValidator.validate(tema);
+        // the exception must be caught if the validation does not pass
+        try {
+            temaValidator.validate(tema);
+        } catch (ValidationException ve){
+            return tema;
+        }
+
         return temaFileRepository.save(tema);
     }
 
@@ -173,7 +179,7 @@ public class Service {
             }
         }
         notaFileRepository.save(nota);
-        String filename = "fisiere/" + student.getNume() + ".txt";
+        String filename = "src/main/resources/fisiere/" + student.getNume() + ".txt";
         try(BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(filename, true))){
             bufferedWriter.write("\nTema: " + tema.getID());
             bufferedWriter.write("\nNota: " + nota.getNota());
