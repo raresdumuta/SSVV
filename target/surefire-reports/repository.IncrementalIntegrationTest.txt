@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: repository.IncrementalIntegrationTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.391 s <<< FAILURE! - in repository.IncrementalIntegrationTest
+testAddNota  Time elapsed: 0.143 s  <<< ERROR!
+validation.ValidationException: Studentul nu exista!
+	at repository.IncrementalIntegrationTest.testAddNota(IncrementalIntegrationTest.java:59)
+

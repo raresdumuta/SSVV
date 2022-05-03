@@ -1,2 +1,5 @@
-/Users/dumutarares/Downloads/Lab1Project2WithMaven/src/test/java/service/testAddTema.java
+/Users/dumutarares/Downloads/Lab1Project2WithMaven/src/test/java/repository/TestNota.java
 /Users/dumutarares/Downloads/Lab1Project2WithMaven/src/test/java/repository/AbstractXMLRepositoryTest.java
+/Users/dumutarares/Downloads/Lab1Project2WithMaven/src/test/java/repository/TestTema.java
+/Users/dumutarares/Downloads/Lab1Project2WithMaven/src/test/java/repository/BigBangIT.java
+/Users/dumutarares/Downloads/Lab1Project2WithMaven/src/test/java/repository/IncrementalIntegrationTest.java

@@ -41,26 +41,26 @@ public class IncrementalIntegrationTest {
 
     @Test
     public void testAddTemaIT(){
-        Student student = new Student("55", "Anna", 200,"rares@gmail.com");
-        assertNull(service.addStudent(student));
-        service.deleteStudent("55");
+        Student student = new Student("57", "Anna", 200,"rares@gmail.com");
         Tema tema = new Tema("123889","frumoasa",4,6);
+        assertNull(service.addStudent(student));
         assertNull(service.addTema(tema));
+        service.deleteStudent("57");
         service.deleteTema("123889");
     }
 
     @Test
     public void testAddNota(){
-        Student student = new Student("55", "Anna", 200,"rares@gmail.com");
-        Tema tema = new Tema("123889","frumoasa",4,6);
+        Student student = new Student("56", "a", 200,"rares@gmail.com");
+        Tema tema = new Tema("123889","frumoasa",3,3);
         LocalDate now = LocalDate.of(2018,10,18);
-        Nota nota = new Nota("2","55","123889",10.0,now);
+        Nota nota = new Nota("2","56","123889",10.0,now);
 
-        assertEquals(service.addNota(nota,"buna"),10.0);
-        assertNull(service.addTema(tema));
         assertNull(service.addStudent(student));
+        assertNull(service.addTema(tema));
+        assertEquals(service.addNota(nota,"buna"),10.0);
         service.deleteNota("2");
         service.deleteTema("123889");
-        service.deleteStudent("55");
+        service.deleteStudent("56");
     }
 }

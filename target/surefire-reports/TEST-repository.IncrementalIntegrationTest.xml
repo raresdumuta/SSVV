@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="repository.AbstractXMLRepositoryTest" time="0.192" tests="10" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="repository.IncrementalIntegrationTest" time="0.391" tests="3" errors="1" skipped="0" failures="0">
   <properties>
     <property name="gopherProxySet" value="false"/>
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
@@ -62,14 +62,11 @@
     <property name="java.class.version" value="55.0"/>
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
   </properties>
-  <testcase name="testSaveTemaPrimire0" classname="repository.AbstractXMLRepositoryTest" time="0.023"/>
-  <testcase name="testSaveTema" classname="repository.AbstractXMLRepositoryTest" time="0.031"/>
-  <testcase name="Test_save_student_when_id_is_empty" classname="repository.AbstractXMLRepositoryTest" time="0.019"/>
-  <testcase name="Test_save_student_when_id_is_null_returns_null" classname="repository.AbstractXMLRepositoryTest" time="0.023"/>
-  <testcase name="Test_save_student_when_data_is_valid_success" classname="repository.AbstractXMLRepositoryTest" time="0.025"/>
-  <testcase name="testSaveTemaDeadline0" classname="repository.AbstractXMLRepositoryTest" time="0.008"/>
-  <testcase name="Test_save_student_when_grupa_negative" classname="repository.AbstractXMLRepositoryTest" time="0.018"/>
-  <testcase name="testSaveTemaInvalid" classname="repository.AbstractXMLRepositoryTest" time="0.012"/>
-  <testcase name="Test_save_student_when_email_is_empty" classname="repository.AbstractXMLRepositoryTest" time="0.014"/>
-  <testcase name="Test_save_student_when_email_is_null" classname="repository.AbstractXMLRepositoryTest" time="0.008"/>
+  <testcase name="testAddNota" classname="repository.IncrementalIntegrationTest" time="0.143">
+    <error message="Studentul nu exista!" type="validation.ValidationException">validation.ValidationException: Studentul nu exista!
+	at repository.IncrementalIntegrationTest.testAddNota(IncrementalIntegrationTest.java:59)
+</error>
+  </testcase>
+  <testcase name="testAddStudent" classname="repository.IncrementalIntegrationTest" time="0.197"/>
+  <testcase name="testAddTemaIT" classname="repository.IncrementalIntegrationTest" time="0.022"/>
 </testsuite>
